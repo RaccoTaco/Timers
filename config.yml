@@ -1,0 +1,45 @@
+# ----------------------------------------------
+# Basic Format:
+# 
+# number-of-commands: 2 (number of commands executing)
+# 
+# command-list: (DO NOT EDIT THIS LINE - IT IS NEEDED)
+#    1: (commands must be numbered)
+#       time: 00:00:00 - 23:59:59   
+#       day:  Tue, Tuesday, All, etc
+#       commands: 
+#          -broadcast hello (command)
+# -----------------------------------------------
+
+# Commands here
+command-list:
+    LWCExpire:
+        time: '12:00:00'
+        day: 'All'
+        commands:
+            - lwc admin expire 21 days
+    BC-LWCExpire:
+        time: '12:00:10'
+        day: 'All'
+        commands:
+            - broadcast Old LWC entities (21+ days) have been unlocked.
+    BC-ResWorld:
+        time: '1:59:00'
+        day: 'Thursday'
+        commands:
+            - broadcast ResWorld will regenerate in 1 minute. Please move away from ResWorld.
+    ResWorld:
+        time: '2:00:00'
+        day: 'Thursday'
+        commands:
+            - mv regen ResWorld -s
+    ResWorld-confirm:
+        time: '2:00:05'
+        day: 'Thursday'
+        commands:
+            - mv confirm
+    ChestShop:
+        time: '12:00:00'
+        day: '4'
+        commands:
+            - chestshop item refresh

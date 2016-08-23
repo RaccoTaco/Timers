@@ -1,0 +1,5 @@
+name: TacoTimer
+version: 1.0
+author: RaccoTaco
+main: tacohime.tacotime.TacoTimer
+description: Timers for TacoHime
